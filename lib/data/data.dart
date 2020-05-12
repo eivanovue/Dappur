@@ -157,6 +157,34 @@ List<MessageModel> getMessages() {
 
   messageModel = new MessageModel();
 
+  //1
+  messageModel.isByMe = true;
+  messageModel.message = "I'm good, thanks. Just did my workout and I am getting ready for dinner.";
+  messages.add(messageModel);
+
+  messageModel = new MessageModel();
+
+  //1
+  messageModel.isByMe = false;
+  messageModel.message = "Nice! What did you workout?";
+  messages.add(messageModel);
+
+  messageModel = new MessageModel();
+
+  //1
+  messageModel.isByMe = true;
+  messageModel.message = "Today was leg day!";
+  messages.add(messageModel);
+
+  messageModel = new MessageModel();
+
+  //1
+  messageModel.isByMe = false;
+  messageModel.message = "Never miss those!";
+  messages.add(messageModel);
+
+  messageModel = new MessageModel();
+
   return messages;
 }
 

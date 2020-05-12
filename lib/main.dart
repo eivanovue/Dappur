@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:dappur/views/home.dart';
-import 'views/chat.dart';
 
 void main() => runApp(MyApp());
 

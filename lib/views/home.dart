@@ -3,7 +3,6 @@ import 'package:dappur/models/story_model.dart';
 import 'package:dappur/models/chat_model.dart';
 import 'package:dappur/views/chat.dart';
 import 'package:flutter/material.dart';
-import 'package:dappur/views/chat.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -16,8 +15,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    // TODO: implement initState
-    super.initState();
+        super.initState();
 
     stories = getStories();
     chats = getChats();
@@ -39,7 +37,7 @@ class _HomeState extends State<Home> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      "Messages",
+                      "Dappur",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 25,
@@ -128,8 +126,8 @@ class _HomeState extends State<Home> {
 }
 
 class StoryTile extends StatefulWidget {
-  String imgUrl;
-  String username;
+  final String imgUrl;
+  final String username;
 
   StoryTile({@required this.imgUrl, @required this.username});
 
@@ -167,12 +165,12 @@ class _StoryTileState extends State<StoryTile> {
 }
 
 class ChatTile extends StatelessWidget {
-  String imgUrl;
-  String name;
-  String lastMessage;
-  bool haveunreadmessages;
-  int unreadmessages;
-  String lastSeenTime;
+  final String imgUrl;
+  final String name;
+  final String lastMessage;
+  final bool haveunreadmessages;
+  final int unreadmessages;
+  final String lastSeenTime;
   ChatTile({
     @required this.imgUrl,
     @required this.name,
@@ -217,10 +215,13 @@ class ChatTile extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 8,
                   ),
                   Text(lastMessage,
-                      style: TextStyle(color: Colors.black54, fontSize: 16))
+                      style: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontFamily: "Neue Haas Grotesk"))
                 ],
               ),
             ),
