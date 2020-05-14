@@ -1,15 +1,21 @@
 import 'package:dappur/data/data.dart';
 import 'package:dappur/models/story_model.dart';
 import 'package:dappur/models/chat_model.dart';
-import 'package:dappur/views/chat.dart';
+import 'package:dappur/views/services/auth.dart';
+import 'file:///C:/Users/eivanovue/Desktop/dappur/lib/views/screens/chat/chat.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
+
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
+
+  final AuthService _auth = AuthService();
+
   List<StoryModel> stories = new List();
   List<ChatModel> chats = new List();
 
@@ -24,7 +30,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff171719),
+        backgroundColor: Color(0xff32343d),
         body: SingleChildScrollView(
           child: Container(
               child: Column(
@@ -38,10 +44,13 @@ class _HomeState extends State<Home> {
                   children: <Widget>[
                     Text(
                       "Dappur",
-                      style: TextStyle(
+                  style: GoogleFonts.montserrat(
+                      textStyle: TextStyle(
                           color: Colors.white,
-                          fontSize: 25,
-                          fontWeight: FontWeight.w600),
+                          fontSize: 36,
+                          letterSpacing: 1,
+                          fontWeight: FontWeight.w500
+                      ))
                     ),
                     Spacer(),
                     Container(
@@ -52,7 +61,22 @@ class _HomeState extends State<Home> {
                         child: Icon(
                           Icons.add,
                           color: Colors.white,
-                        ))
+                        )),
+                    SizedBox(width: 10,),
+                    GestureDetector(
+                      onTap: () async {
+                        await _auth.signOut();
+                      },
+                      child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: Color(0xff444446),
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Icon(
+                            Icons.power_settings_new,
+                            color: Colors.white,
+                          )),
+                    )
                   ],
                 ),
               ),
@@ -146,8 +170,8 @@ class _StoryTileState extends State<StoryTile> {
               borderRadius: BorderRadius.circular(60),
               child: Image.network(
                 widget.imgUrl,
-                height: 60,
-                width: 60,
+                height: 63,
+                width: 63,
                 fit: BoxFit.cover,
               ),
             ),
@@ -156,7 +180,7 @@ class _StoryTileState extends State<StoryTile> {
             ),
             Text(widget.username,
                 style: TextStyle(
-                    color: Color(0xff78778a),
+                    color: Colors.white70,
                     fontSize: 16,
                     fontWeight: FontWeight.w600))
           ],

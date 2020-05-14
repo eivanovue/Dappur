@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "426976917345",
+    "firebase_url": "https://dappur-9032b.firebaseio.com",
+    "project_id": "dappur-9032b",
+    "storage_bucket": "dappur-9032b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:426976917345:android:2acfb3e2135e95c76cf720",
+        "android_client_info": {
+          "package_name": "com.eivanovue.dappur"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "426976917345-0jkeif6o7claj4hgpu45flsbk3jdma8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-EwL_jKXUhMxa2c1_c-8nTZI2YFCE-WU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "426976917345-0jkeif6o7claj4hgpu45flsbk3jdma8c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
