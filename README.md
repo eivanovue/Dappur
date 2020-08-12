@@ -1,6 +1,6 @@
 # dappur
 
-A new Flutter application.
+A new Flutter application for social connection.
 
 ## Getting Started
 
